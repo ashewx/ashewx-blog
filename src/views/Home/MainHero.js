@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '../../components/Typography';
 import MainHeroLayout from './MainHeroLayout';
@@ -55,21 +56,31 @@ function MainHero(props) {
         Ameteur photographer and self-proclaimed ukulele enthusiast.
       </Typography>
       <Box>
-        <IconButton aria-label="GitHub" href="https://github.com/ashewx" target="_blank">
-          <GitHub />
-        </IconButton>
-        <IconButton aria-label="Facebook" href="https://www.facebook.com/ashewx" target="_blank">
-          <FaceBook />
-        </IconButton>
-        <IconButton aria-label="Instagram" href="https://www.instagram.com/ashewx/" target="_blank">
-          <Instagram />
-        </IconButton>
-        <IconButton aria-label="Twitter" href="https://twitter.com/ashewx" target="_blank">
-          <Twitter />
-        </IconButton>
-        <IconButton aria-label="LinkedIn" href="https://www.linkedin.com/in/andrew-nguyen-08bbb2129/" target="_blank">
-          <LinkedIn />
-        </IconButton>
+        <Tooltip title="GitHub" aria-label="GitHub">
+          <IconButton aria-label="GitHub" href="https://github.com/ashewx" target="_blank">
+            <GitHub />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="Facebook" aria-label="Facebook">
+          <IconButton aria-label="Facebook" href="https://www.facebook.com/ashewx" target="_blank">
+            <FaceBook />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="Instagram" aria-label="Instagram">
+          <IconButton aria-label="Instagram" href="https://www.instagram.com/ashewx/" target="_blank">
+            <Instagram />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="Twitter" aria-label="Twitter">
+          <IconButton aria-label="Twitter" href="https://twitter.com/ashewx" target="_blank">
+            <Twitter />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="LinkedIn" aria-label="Twitter">
+          <IconButton aria-label="LinkedIn" href="https://www.linkedin.com/in/andrew-nguyen-08bbb2129/" target="_blank">
+            <LinkedIn />
+          </IconButton>
+        </Tooltip>
       </Box>
       <Typography variant="body2" color="inherit" className={classes.more}>
         Be sure to connect with me on social media!

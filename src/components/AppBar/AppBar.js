@@ -20,9 +20,6 @@ const styles = (theme) => ({
   left: {
     flex: 1,
   },
-  leftLinkActive: {
-    color: theme.palette.common.white,
-  },
   right: {
     flex: 1,
     display: 'flex',
