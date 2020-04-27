@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
+import SvgIcon from '@material-ui/core/SvgIcon';
 import AppBarWrapper from './AppBarWrapper';
 import Button from '../Button';
 import Toolbar, { styles as toolbarStyles } from '../Toolbar';
+import { ReactComponent as Logo } from '../../assets/ANoutline.svg'
 
 const styles = (theme) => ({
   title: {
-    fontSize: 24,
+    display: 'flex'
   },
   placeholder: toolbarStyles(theme).root,
   toolbar: {
@@ -29,6 +31,10 @@ const styles = (theme) => ({
   rightLink: {
     fontSize: 16,
     color: theme.palette.common.white
+  },
+  logo: {
+    width: theme.spacing(8),
+    height: theme.spacing(8),
   }
 });
 
@@ -46,7 +52,9 @@ function AppBar(props) {
             className={classes.title}
             href="/"
           >
-            Andrew Nguyen
+            <SvgIcon className={classes.logo}>
+              <Logo />
+            </SvgIcon>
           </Link>
           <div className={classes.right}>
             <Button>
