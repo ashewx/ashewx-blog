@@ -1,11 +1,9 @@
-const functions = require("firebase-functions");
 const express = require("express");
 const {getAlbum} = require('./google-photos')
 const app = express();
-const port = 9000;
 
-app.listen(port, () => {
-  console.log("Listening to Port " + port);
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Listening to Port");
 });
 
 // authorize CORS (for demo only)
@@ -33,5 +31,3 @@ app.get("/photos", async (request, response) => {
 app.get("/ping", (req, res) => {
   res.send("Hello World");
 });
-
-exports.app = functions.https.onRequest(app);
