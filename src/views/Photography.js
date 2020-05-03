@@ -39,13 +39,15 @@ class Photography extends React.Component {
     super(props);
     this.state = {
       images: [],
+      screenWidth: window.innerWidth,
+      screenHeight: window.innerHeight
     };
   }
 
   componentDidMount() {
+    // Load images from Google
     axios.get("https://ashewx-blog.herokuapp.com/photos").then((data) => {
       this.setState({
-        ...this.state,
         images: [],
       });
 
@@ -57,7 +59,6 @@ class Photography extends React.Component {
           let height = newImg.height;
           let width = newImg.width;
           this.setState({
-            ...this.state,
             images: [
               ...this.state.images,
               {
@@ -72,11 +73,22 @@ class Photography extends React.Component {
         return x;
       });
     });
+
+    // Simulate media query
+    window.addEventListener("resize", this.resize.bind(this));
+  }
+
+  resize() {
+    this.setState({
+      screenWidth: window.innerWidth,
+      screenHeight: window.innerHeight
+    })
   }
 
   render() {
     const { classes } = this.props;
     const images = this.state.images;
+    const imgRatio = this.state.screenWidth > 992 ? 250:150
 
     return (
       <Container className={classes.root}>
@@ -86,8 +98,8 @@ class Photography extends React.Component {
               key={x.url}
               className={classes.imgCont}
               style={{
-                width: `${(x.width * 250) / x.height}px`,
-                flexGrow: `${(x.width * 250) / x.height}px`,
+                width: `${(x.width * imgRatio) / x.height}px`,
+                flexGrow: `${(x.width * imgRatio) / x.height}px`,
               }}
             >
               <i
