@@ -15,7 +15,7 @@ const styles = (theme) => ({
   },
   placeholder: toolbarStyles(theme).root,
   toolbar: {
-    justifyContent: "space-between",
+    justifyContent: "space-between"
   },
   left: {
     flex: 1,
@@ -26,13 +26,17 @@ const styles = (theme) => ({
     justifyContent: "flex-end",
   },
   rightLink: {
-    fontSize: 20,
     color: theme.palette.common.white,
+    [theme.breakpoints.down('sm')]: {
+      "& > button": {
+        padding: '16px 3px'
+      }
+    }
   },
   logo: {
     width: theme.spacing(8),
     height: theme.spacing(8),
-  },
+  }
 });
 
 class AppBar extends React.Component {

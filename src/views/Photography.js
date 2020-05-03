@@ -88,7 +88,7 @@ class Photography extends React.Component {
   render() {
     const { classes } = this.props;
     const images = this.state.images;
-    const imgRatio = this.state.screenWidth > 992 ? 250:150
+    const imgRatio = this.state.screenWidth > 992 ? 250:100
 
     return (
       <Container className={classes.root}>
