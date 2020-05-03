@@ -35,62 +35,63 @@ const styles = (theme) => ({
   }
 });
 
-function AppBar(props) {
-  const { classes } = props;
-
-  return (
-    <div>
-      <AppBarWrapper position="fixed">
-        <Toolbar className={classes.toolbar}>
-          <Link
-            variant="h6"
-            underline="none"
-            color="inherit"
-            className={classes.title}
-            href="/"
-          >
-            <SvgIcon className={classes.logo}>
-              <Logo />
-            </SvgIcon>
-          </Link>
-          <div className={classes.right}>
-            <Button>
-              <Link
-                variant="h6"
-                underline="none"
-                className={clsx(classes.rightLink)}
-                href="/blog/"
-              >
-                Blog
-              </Link>
-            </Button>
-            <Button>
-              <Link
-                color="inherit"
-                variant="h6"
-                underline="none"
-                className={classes.rightLink}
-                href="/photography/"
-              >
-                Photography
-              </Link>
-            </Button>
-            <Button>
-              <Link
-                variant="h6"
-                underline="none"
-                className={clsx(classes.rightLink)}
-                href="/videos/"
-              >
-                Videos
-              </Link>
-            </Button>
-          </div>
-        </Toolbar>
-      </AppBarWrapper>
-      <div className={classes.placeholder} />
-    </div>
-  );
+class AppBar extends React.Component {
+  render() {
+    const { classes } = this.props;
+    return (
+      <div>
+        <AppBarWrapper position="fixed">
+          <Toolbar className={classes.toolbar}>
+            <Link
+              variant="h6"
+              underline="none"
+              color="inherit"
+              className={classes.title}
+              href="/"
+            >
+              <SvgIcon className={classes.logo}>
+                <Logo />
+              </SvgIcon>
+            </Link>
+            <div className={classes.right}>
+              <Button>
+                <Link
+                  variant="h6"
+                  underline="none"
+                  className={clsx(classes.rightLink)}
+                  href="/blog/"
+                >
+                  Blog
+                </Link>
+              </Button>
+              <Button>
+                <Link
+                  color="inherit"
+                  variant="h6"
+                  underline="none"
+                  className={classes.rightLink}
+                  href="/photography/"
+                >
+                  Photography
+                </Link>
+              </Button>
+              <Button>
+                <Link
+                  variant="h6"
+                  underline="none"
+                  className={clsx(classes.rightLink)}
+                  href="/videos/"
+                >
+                  Videos
+                </Link>
+              </Button>
+            </div>
+          </Toolbar>
+        </AppBarWrapper>
+        <div className={classes.placeholder} />
+      </div>
+    );
+  }
 }
 
 AppBar.propTypes = {

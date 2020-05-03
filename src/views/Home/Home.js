@@ -1,19 +1,17 @@
-import withRoot from '../../withRoot';
+import withRoot from "../../withRoot";
 // --- Post bootstrap -----
-import React from 'react';
-//import ProductCategories from '../ProductCategories';
-//import AppFooter from '../../components/Footer/AppFooter';
-import MainHero from './MainHero';
-//import ProductValues from '../ProductValues';
+import React from "react";
+import MainHero from "./MainHero";
 
-function Home() {
-  return (
-    <React.Fragment>
-      <MainHero />
-      {/*<ProductValues />
-      <ProductCategories />*/}
-    </React.Fragment>
-  );
+
+class Home extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <MainHero />
+      </React.Fragment>
+    );
+  }
 }
 
 export default withRoot(Home);
