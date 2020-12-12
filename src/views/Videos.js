@@ -4,11 +4,11 @@ import { withStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 
 const styles = (theme) => ({
-    root: {
-      backgroundColor: theme.palette.primary.light,
-      paddingTop: theme.spacing(4),
-      paddingBottom: theme.spacing(4),
-    }
+  root: {
+    backgroundColor: theme.palette.primary.light,
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(4),
+  }
 });
 
 class Videos extends React.Component {

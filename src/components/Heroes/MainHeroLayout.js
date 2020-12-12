@@ -18,7 +18,6 @@ const styles = (theme) => ({
     [theme.breakpoints.down('sm')]: {
       height: '100%',
       minHeight: 500,
-      maxHeight: 1300,
     }
   },
   container: {
