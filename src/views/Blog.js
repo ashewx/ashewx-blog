@@ -8,6 +8,8 @@ const styles = (theme) => ({
       backgroundColor: theme.palette.primary.light,
       paddingTop: theme.spacing(4),
       paddingBottom: theme.spacing(4),
+      top: '64px',
+      position: 'relative'
     }
 });
 

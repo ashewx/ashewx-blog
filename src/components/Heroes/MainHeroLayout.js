@@ -10,13 +10,14 @@ const styles = (theme) => ({
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
+    top: '64px',
     [theme.breakpoints.up('sm')]: {
-      height: 'calc(100vh - 70px)',
+      height: 'calc(100vh - 64px)',
       minHeight: 500,
       maxHeight: 1300,
     },
     [theme.breakpoints.down('sm')]: {
-      height: '100%',
+      height: 'calc(100vh - 64px)',
       minHeight: 500,
     }
   },
@@ -25,7 +26,7 @@ const styles = (theme) => ({
     marginBottom: theme.spacing(14),
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   backdrop: {
     position: 'absolute',

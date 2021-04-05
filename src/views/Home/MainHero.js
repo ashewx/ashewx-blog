@@ -37,6 +37,10 @@ const styles = (theme) => ({
   profilePic: {
     width: theme.spacing(30),
     height: theme.spacing(30),
+    "@media (max-height: 700px)": {
+      width: theme.spacing(24),
+    height: theme.spacing(24),
+    }
   },
 });
 

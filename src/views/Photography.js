@@ -1,10 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
-import ButtonBase from "@material-ui/core/ButtonBase";
-import Backdrop from '@material-ui/core/Backdrop';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import {
+  Container,
+  ButtonBase,
+  Backdrop,
+  CircularProgress
+} from "@material-ui/core";
 import axios from "axios";
 
 const styles = (theme) => ({
@@ -12,6 +14,8 @@ const styles = (theme) => ({
     backgroundColor: theme.palette.primary.light,
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
+    position: 'relative',
+    top: '64px'
   },
   section: {
     display: "flex",
@@ -56,14 +60,17 @@ const styles = (theme) => ({
     color: '#fff',
   },
   innerBackdrop: {
-    height: 'calc(100% - 70px)',
+    height: 'calc(100% - 64px)',
     width: '100%',
-    top: '70px',
     position: 'fixed',
     textAlign: 'center',
     justifyContent: 'center',
     display: 'flex',
     alignItems: 'center',
+    [theme.breakpoints.down('sm')]: {
+      height: 'calc(100%/2)',
+      width: 'auto'
+    }
   }
 });
 

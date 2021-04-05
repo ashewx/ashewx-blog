@@ -7,7 +7,7 @@ import Home from "./views/Home/Home";
 import Photography from "./views/Photography";
 import Blog from "./views/Blog";
 import Videos from "./views/Videos";
-import AppBar from "./components/AppBar/AppBar";
+import AppBar from "./components/AppBar";
 
 function App() {
   return (
