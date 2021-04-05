@@ -167,7 +167,7 @@ class Photography extends React.Component {
         </section>
         <Backdrop className={classes.backdrop} open={this.state.open} onClick={this.handleClose}>
           <div className={classes.innerBackdrop}>
-            {this.state.activePhoto ?
+            {this.state.activePhoto !== null && this.state.activePhoto >= 0 ?
             <img style={{height:'100%'}} src={this.state.images[this.state.activePhoto].urlBig} alt="" loading="lazy" />:
             <CircularProgress color="secondary" size={250} />
             }
